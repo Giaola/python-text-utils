@@ -1,4 +1,4 @@
-from unicodedata import normalize
+from unicodedata import normalize, category
 
 from python_text_utils.generic import Generic
 
@@ -17,13 +17,8 @@ class Greek(object):
         :param text:        unicode or str string.
         :return:            returns unicode string without accents.
         """
-        accent = u'\u0301'
-        text = Generic.to_unicode(text)
-        return normalize('NFC', ''.join(
-            ch
-            for ch in normalize('NFD', text)
-            if ch not in [accent]
-        ))
+        return ''.join((c for c in normalize('NFD', text)
+                                if category(c) != 'Mn'))
 
     @classmethod
     def strip_punctuation_and_accent_unicode(cls, text):
