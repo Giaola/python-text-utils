@@ -48,7 +48,7 @@ def get_package_data(package):
 
 setup(
     name='python-text-utils',
-    version='0.0.2',
+    version='0.0.3',
     url='https://github.com/Giaola/python-text-utils',
     license='MIT',
     description='A set of text utilities for python.',
