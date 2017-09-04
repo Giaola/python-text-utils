@@ -48,7 +48,7 @@ def get_package_data(package):
 
 setup(
     name='python-text-utils',
-    version='0.0.5',
+    version='0.0.6',
     url='https://github.com/Giaola/python-text-utils',
     license='MIT',
     description='A set of text utilities for python.',
@@ -69,6 +69,5 @@ setup(
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
-    ],
-    test_suite='python_text_utils.tests'
+    ]
 )
